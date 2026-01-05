@@ -1,34 +1,43 @@
 # Java CRUD de Usuários
 
-Este é um projeto em Java que implementa um CRUD (Create, Read, Update, Delete) simples para gerenciamento de usuários. 
-Ele utiliza Scanner para interação via terminal e valida dados de entrada como nome e CPF, garantindo integridade dos dados.
+Projeto acadêmico em Java que implementa um CRUD (Create, Read, Update, Delete) para gerenciamento de usuários via terminal.
+O objetivo é aplicar conceitos de Programação Orientada a Objetos, organização em camadas e boas práticas de código.
 
 ---
 
-## Funcionalidades
+## 📋 Funcionalidades
 
-- Adicionar usuário com validação de nome e CPF.
-- Listar todos os usuários cadastrados.
-- Buscar usuário por **ID**, **CPF** ou **nome** (parcial).
-- Deletar usuário por **ID**.
-- Validações robustas para:
-  - Nome: apenas letras e espaços.
-  - CPF: exatamente 11 números, sem duplicatas.
-  - Opções do menu: números válidos de 1 a 7, evitando que o programa quebre com entradas inválidas.
+- Adicionar usuários com validação de nome e CPF
+- Listar todos os usuários cadastrados
+- Buscar usuário por ID, CPF ou nome (parcial)
+- Remover usuário por ID
+- Validações robustas para evitar dados inválidos
 
 ---
 
-## Tecnologias
+## 📌 Arquitetura
 
-- Java 17+ (ou versão compatível)
-- Conceitos de **POO**: classes, objetos e métodos.
-- Estruturas de dados: `List` para armazenamento temporário de usuários.
+Este projeto segue uma organização em camadas para manter o código limpo e fácil de manter:
+
+- **model**: entidades do sistema (ex.: `Usuario`) e seus atributos.
+- **repository**: acesso e manipulação dos dados (CRUD), concentrando a lógica de persistência.
+- **service**: regras de negócio e validações, fazendo a ponte entre a interface e o repositório.
+
+Fluxo básico:
+`Interface/Menu → Service → Repository → Dados`
 
 ---
 
-## Como Executar
+## 🛠 Tecnologias
+
+- **Java** (aplicação console)
+- **Scanner** para entrada de dados via terminal
+- **Git & GitHub** para versionamento
+
+---
+
+## 🚀 Como executar
 
 1. Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/java-crud-ads.git
+   ```bash
+   git clone https://github.com/KiritoN9/crud-java-ads.git
